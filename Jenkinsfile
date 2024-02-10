@@ -1,12 +1,12 @@
 pipeline{
 
+agent any
 environment{
     RELEASE_DATE=20.04
 }
-agent any
-    stages{
+  stages{
 
-        stage{
+        stage('build'){
             agent any
             environment {
                 DOCKER_FILE=2.3
@@ -15,7 +15,7 @@ agent any
                 echo "Hello from the jenkins file level, your docker file is ${DOCKER_FILE}"
             }
         }
-        stage{
+        stage('testing stage'){
             agent any
             environment{
                 DEV='in dev mode'
