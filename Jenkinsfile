@@ -3,6 +3,7 @@ pipeline{
 agent any
 environment{
     RELEASE_DATE=20.04
+    JAVA_VERSION='R.5.4'
 }
   stages{
 
@@ -22,6 +23,7 @@ environment{
             }
             steps{
                 echo "Hello, I am in ${DEV} mode"
+                ECHO "JAVA VERSION IS ${JAVA_VERSION}"
             }
         }
     }
