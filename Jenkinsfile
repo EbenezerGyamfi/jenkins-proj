@@ -23,7 +23,7 @@ environment{
             }
             steps{
                 echo "Hello, I am in ${DEV} mode"
-                ECHO "JAVA VERSION IS ${JAVA_VERSION}"
+                echo "JAVA VERSION IS ${JAVA_VERSION}"
             }
         }
     }
